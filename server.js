@@ -3,7 +3,6 @@ const app = express();
 const server = require("http").Server(app);
 const { v4: uuidv4 } = require("uuid");
 const path = require("path");
-const hostname = require("localhost");
 
 app.set("view engine", "ejs");
 
