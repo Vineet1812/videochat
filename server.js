@@ -3,6 +3,7 @@ const app = express();
 const server = require("http").Server(app);
 const { v4: uuidv4 } = require("uuid");
 const path = require("path");
+const hostname = "localhost";
 
 app.set("view engine", "ejs");
 
@@ -39,4 +40,4 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(process.env.PORT || 3004, () => console.log("server running"));
+server.listen(process.env.PORT || 3004, hostname , () => console.log("server running"));
